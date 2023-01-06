@@ -3,32 +3,39 @@ import '../assets/css/main.css'
 import Navbar from "../components/Navbar";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-
+import working from '../assets/imgs/working-woman.png'
 const Home = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row mb-4 bg-white"></div>
       <div className="flex flex-col main-bg">
         <Navbar/>
+        <div className="gray-filter">
         <hr className="border-white my-2"/>
-        <div className="mt-80">
-          <div className="flex flex-col text-white text-center">
-            <h2 className="typo-nuevas">Nuevas</h2>
-            <h1 className="typo-tecnologias -mt-12">TECNOLOGÍAS</h1>
-            <p className="typo-parragraph -mt-2">Comenzando nuevos proyectos seguros de que lo que</p>
-            <p className="typo-parragraph -mt-3">nosotros tenemos para ti, te va a servir.</p>
+          <div className="mt-80 ">
+            <div className="flex flex-col text-white text-center">
+              <h2 className="typo-nuevas">Nuevas</h2>
+              <h1 className="typo-tecnologias -mt-12">TECNOLOGÍAS</h1>
+              <p className="typo-parragraph -mt-2">Comenzando nuevos proyectos seguros de que lo que</p>
+              <p className="typo-parragraph -mt-3">nosotros tenemos para ti, te va a servir.</p>
+            </div>
           </div>
-        </div>
-        <div className="w-full flex flex-row justify-center mt-8">
-          <div
-            className="border-2 bg-white rounded-full flex flex-row w-40 px-3 py-3 hover:bg-transparent hover:text-white cursor-pointer">
-            <p>Ver productos</p>
-            <FontAwesomeIcon icon={solid('caret-right')} className="ml-1 mt-1 cursor-pointer w-4"/>
+          <div className="w-full flex flex-row justify-center mt-8 mb-40">
+            <div
+              className="border-2 bg-white rounded-full flex flex-row w-40 justify-center py-3 hover:bg-transparent hover:text-white cursor-pointer">
+              <p>Ver productos</p>
+              <FontAwesomeIcon icon={solid('caret-right')} className="ml-1 mt-1 cursor-pointer w-4"/>
+            </div>
           </div>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-12">
+        <div className="flex flex-row w-full justify-center">
+          <img src={working} alt="woking-woman" />
+          <div className="ml-24">
 
+          </div>
+        </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#f3f4f5" fill-opacity="1"

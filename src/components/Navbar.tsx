@@ -1,6 +1,5 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import '../assets/css/navbar.css'
-import logoCorp from '../assets/logo/logo-corp.png';
 import logoTitle from '../assets/logo/logo-title.png';
 import NavbarItem from "./NavbarItem";
 import DropDown from "./DropDown";
