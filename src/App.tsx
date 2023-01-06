@@ -1,14 +1,18 @@
 import React from 'react';
-import './App.css';
-import loading from './animation_500_lcjsdwvh.gif'
+import './assets/css/main.css';
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={loading} alt="loading..." width="500vw"/>
-        <p>Estamos en proceso de construcción</p>
-      </header>
+      <Routes >
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/productos' element={<Products />}></Route>
+        <Route path='/contacto' element={<Contact />}></Route>
+      </Routes>
     </div>
   );
 }
