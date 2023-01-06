@@ -3,3 +3,25 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.typo-nuevas{
+    font-size: 5vw;
+    font-width: 300;
+    font-weight: lighter;
+}
+
+.typo-tecnologias{
+    font-size: 7vw;
+    font-weight: bolder;
+}
+
+.typo-parragraph{
+    font-size: 1.5vw;
+    font-weight: lighter;
+}
+
+.wave{
+    background-image: url("../imgs/wave.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
