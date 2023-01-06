@@ -15,7 +15,7 @@ const Navbar = () => {
           <img src={logoCorp} alt="logo" className="w-full pt-6"/>
         </div>
       </div>
-      <div className="flex flex-row w-full justify-center text-xl font-bold mt-4">
+      <div className="flex flex-row w-full  text-xl font-bold mt-4">
         <NavbarItem title="Inicio"/>
         <DropDown title="Productos" >
           <p className="hover:bg-gray-300 cursor-pointer">DUNNAGE</p>
@@ -47,7 +47,9 @@ const Navbar = () => {
           <p className="hover:bg-gray-300 cursor-pointer">HOJEADO</p>
         </DropDown>
         <NavbarItem title="Contacto"/>
-
+        <div className="">
+          <NavbarItem title="COTIZA CON NOSOTROS" className="ml-24 p-4 rounded-full border-2 border-white -mt-4 text-sm hover:bg-white hover:text-black cursor-pointer "/>
+        </div>
       </div>
     </div>
   );
