@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import working from '../assets/imgs/working-woman.png'
+import Card from "../components/Card";
+
 const Home = () => {
   return (
     <div className="flex flex-col">
@@ -11,7 +13,7 @@ const Home = () => {
       <div className="flex flex-col main-bg">
         <Navbar/>
         <div className="gray-filter">
-        <hr className="border-white my-2"/>
+          <hr className="border-white my-2"/>
           <div className="mt-80 ">
             <div className="flex flex-col text-white text-center">
               <h2 className="typo-nuevas">Nuevas</h2>
@@ -29,18 +31,45 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="mt-12">
-        <div className="flex flex-row w-full justify-center">
-          <img src={working} alt="woking-woman" />
-          <div className="ml-24">
-
+      <div className="mt-80 wave">
+        <div className="flex flex-col mb-12">
+          <div className="flex flex-row w-full justify-center -mt-72">
+            <img src={working} alt="woking-woman" className="h-96"/>
+            <div className="flex flex-col ml-24">
+              <div className="flex flex-col w-96 text-center h-32 rectangle mt-32 ">
+                <div className="flex flex-col -mt-40">
+                  <p className="orange-number">15</p>
+                  <div className="-mt-16">
+                    <p className="text-white font-bold text-2xl">Años de experiencia en creación</p>
+                    <p className="text-white font-bold text-2xl">de materiales</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col text-left w-96">
+                <p className="mt-6">Nuestra experiencia nos respalda y nuestros clientes nos lo
+                  demuestran con la confianza que tienen en nuestros productos realizados 100% en México.</p>
+                <p className="mt-4">Nombre de persona</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full justify-center mt-12 ml-20">
+            <div className="flex flex-col mr-24">
+              <p className="text-gray-500 font-bold">Trabaja con nosotros</p>
+              <div className="flex flex-col mt-4">
+                <p className="font-bold text-2xl">Expertos en nuevos </p>
+                <p className="font-bold text-2xl">proyectos mexicanos</p>
+              </div>
+              <button className="btn-orange px-5 py-1 w-36 mt-4 shadow-sm hover:bg-orange-400">Cotiza</button>
+            </div>
+            <div className="flex md:flex-row sm:flex-col">
+              <Card title="Proyectos Activos" number={30} className="ml-6"/>
+              <Card title="Proyectos Terminados" number={58} className="ml-6"/>
+              <Card title="Piezas Creadas" number={97} className="ml-6"/>
+            </div>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#f3f4f5" fill-opacity="1"
-              d="M0,128L80,133.3C160,139,320,149,480,144C640,139,800,117,960,122.7C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-      </svg>
+
     </div>
   );
 }

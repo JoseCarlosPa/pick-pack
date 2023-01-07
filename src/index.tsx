@@ -4,13 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <BrowserRouter>
-    <App />
+    <BrowserView>
+      <App/>
+    </BrowserView>
+    <MobileView>
+      <h1>Estamos trabjando en la version mobil</h1>
+    </MobileView>
   </BrowserRouter>
 );
 

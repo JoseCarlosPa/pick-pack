@@ -21,11 +21,31 @@
 }
 
 .wave{
-    background-image: url("../imgs/wave.svg");
+    background-image: url("../imgs/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rectangle{
+    background-image: url("../imgs/rectangle.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .gray-filter{
     background: rgba(0, 0, 0, 0.4);
+}
+
+.orange-number{
+    color: #FCAF17;;
+    font-size: 13vw;
+    font-weight: 700;
+}
+
+.btn-orange{
+    background-color: #FCAF17;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 700;
+    border-radius: 0;
 }
