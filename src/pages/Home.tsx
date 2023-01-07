@@ -1,12 +1,33 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import '../assets/css/main.css'
 import Navbar from "../components/Navbar";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import working from '../assets/imgs/working-woman.png'
 import Card from "../components/Card";
+import SelectProduct from "../components/SelectProduct";
 
 const Home = () => {
+
+  const [product, setProduct] = React.useState('Producto 1')
+
+  const ShowProduct = useCallback(()=>{
+    if(product === 'Producto 1'){
+      return <div>Producto 1</div>
+    }
+    if(product === 'Producto 2'){
+      return <div>Producto 2</div>
+    }
+    if(product === 'Producto 3'){
+      return <div>Producto 3</div>
+    }
+    if(product === 'Producto 4'){
+      return <div>Producto 4</div>
+    }
+    return <></>
+
+  },[product])
+
   return (
     <div className="flex flex-col">
       <div className="flex flex-row mb-4 bg-white"></div>
@@ -65,6 +86,23 @@ const Home = () => {
               <Card title="Proyectos Activos" number={30} className="ml-6"/>
               <Card title="Proyectos Terminados" number={58} className="ml-6"/>
               <Card title="Piezas Creadas" number={97} className="ml-6"/>
+            </div>
+          </div>
+          <div className="mt-8 mx-32">
+            <div className="grid grid-cols-12 text-center">
+              <div className="col-span-2"></div>
+              <div className="col-span-2 ">
+                <div className="flex flex-col">
+                  <SelectProduct title={"Producto 1"} setProduct={setProduct} />
+                  <SelectProduct title={"Producto 2"} setProduct={setProduct} />
+                  <SelectProduct title={"Producto 3"} setProduct={setProduct} />
+                  <SelectProduct title={"Producto 4"} setProduct={setProduct} />
+                </div>
+              </div>
+              <div>
+                <ShowProduct />
+              </div>
+              <div>3</div>
             </div>
           </div>
         </div>
