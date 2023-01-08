@@ -52,6 +52,13 @@
     color: #FCAF17;
 }
 
+.bg-button-orange{
+    background-color: #FCAF17;
+}
+.bg-card-blue{
+    background-color: #1C4371;
+}
+
 .btn-orange{
     background-color: #FCAF17;
     color: white;
@@ -62,4 +69,8 @@
 
 .footer{
     background-color: #303030;
+}
+
+.contact-margin{
+    margin-top: -90vh;
 }

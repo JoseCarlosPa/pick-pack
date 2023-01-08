@@ -4,12 +4,16 @@ import logoTitle from '../assets/logo/logo-title.png';
 import NavbarItem from "./NavbarItem";
 import DropDown from "./DropDown";
 
-const Navbar = () => {
+type NavBarProps = {
+  className?: string;
+}
+
+const Navbar = ({className}:NavBarProps) => {
 
   return (
-    <div className="flex flex-row w-full text-xl font-bold mt-4 w-full justify-center">
+    <div className={`flex flex-row w-full text-xl font-bold mt-4 w-full justify-center ${className}`}>
       <img src={logoTitle} alt="logo" className="mr-20 -mt-5"/>
-      <NavbarItem title="Inicio"/>
+      <NavbarItem title="Inicio" link="/"/>
       <DropDown title="Productos">
         <p className="hover:bg-gray-300 cursor-pointer">DUNNAGE</p>
         <p className="hover:bg-gray-300 cursor-pointer">CAJAS</p>
@@ -39,10 +43,11 @@ const Navbar = () => {
         <p className="hover:bg-gray-300 cursor-pointer">LAMINADO</p>
         <p className="hover:bg-gray-300 cursor-pointer">HOJEADO</p>
       </DropDown>
-      <NavbarItem title="Contacto"/>
+      <NavbarItem title="Contacto" link="/contacto"/>
       <div className="">
         <NavbarItem title="COTIZA CON NOSOTROS"
-                    className="p-4 rounded-full border-2 border-white -mt-4 text-sm hover:bg-white hover:text-black cursor-pointer "/>
+                    className="p-4 rounded-full border-2 border-white -mt-4 text-sm hover:bg-white hover:text-black cursor-pointer "
+                    link="/"/>
       </div>
     </div>
   );

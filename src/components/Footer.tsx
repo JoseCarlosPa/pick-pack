@@ -5,7 +5,7 @@ import logoTitle from '../assets/logo/logo-title.png';
 
 const Footer = () => {
   return (
-    <div className="flex flex-col footer text-white">
+    <div className="flex flex-col footer text-white ">
       <div className="grid grid-cols-12 text-center mt-6 mb-6">
         <div className="col-span-5 border-r border-white">
           <img src={logoTitle} alt="logo" className="w-12 mx-auto"/>

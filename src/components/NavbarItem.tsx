@@ -1,18 +1,19 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 type NavbarItemProps = {
   className?: string;
   title: string;
-  link?: string;
+  link: string;
 }
 
 const NavbarItem = ({className, title, link}: NavbarItemProps) => {
   return (
-    <a href={link}>
+    <Link to={link}>
       <div className={`flex flex-row text-white hover:text-gray-100 hover:underline ml-6 ${className}`}>
         <p className="cursor-pointer">{title}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 
