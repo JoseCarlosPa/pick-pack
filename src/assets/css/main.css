@@ -32,6 +32,12 @@
     background-size: cover;
 }
 
+.rectangle-cover{
+    background-image: url("../imgs/rectangle-cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .gray-filter{
     background: rgba(0, 0, 0, 0.4);
 }
@@ -42,10 +48,18 @@
     font-weight: 700;
 }
 
+.orange{
+    color: #FCAF17;
+}
+
 .btn-orange{
     background-color: #FCAF17;
     color: white;
     font-size: 1.5vw;
     font-weight: 700;
     border-radius: 0;
+}
+
+.footer{
+    background-color: #303030;
 }

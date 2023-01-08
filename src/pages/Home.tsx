@@ -5,8 +5,16 @@ import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import working from '../assets/imgs/working-woman.png'
 import working2 from '../assets/imgs/working-woman2.png'
+import product1 from '../assets/imgs/producto1.png'
+import product2 from '../assets/imgs/producto2.png'
+import icon1 from '../assets/imgs/icon-check.png'
+import icon2 from '../assets/imgs/icon-idea.png'
+import icon3 from '../assets/imgs/icon-machine.png'
+
 import Card from "../components/Card";
 import SelectProduct from "../components/SelectProduct";
+import IconCard from "../components/IconCard";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -122,12 +130,52 @@ const Home = () => {
       <div className="flex flex-col mt-28 text-center">
         <p className="font-bold text-xl text-orange-400">PRODUCCIÓN</p>
         <p className="font-bold text-4xl text-gray-800 mt-4">Últimos Trabajos</p>
-        <p className="text-gray-500 mt-4">Nos encanta presumir las nuevas piezas y creaciones que realizamos personalizadas</p>
+        <p className="text-gray-500 mt-4">Nos encanta presumir las nuevas piezas y creaciones que realizamos
+          personalizadas</p>
         <p className="text-gray-500"> para los productos de
           nuestros clientes.</p>
-
       </div>
-
+      <div className="fle flex-col mt-60 rectangle-cover">
+        <div className="flex flex-row justify-center space-x-8 -mt-32 mb-16">
+          <div className="flex flex-col text-center">
+            <img src={product1} alt="product1" className="h-72 shadow"/>
+            <p className="text-white mt-4">Producto 1</p>
+            <p className="text-white mt-4">EMPRESA FECHA</p>
+          </div>
+          <div className="flex flex-col text-center">
+            <img src={product2} alt="product1" className="h-72 shadow"/>
+            <p className="text-white mt-4">Producto 2</p>
+            <p className="text-white mt-4">EMPRESA FECHA</p>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col mt-28 text-center">
+        <p className="font-bold text-xl text-orange-400">COMO TRABAJAMOS</p>
+        <p className="font-bold text-4xl text-gray-800 mt-4">Nuestro Proceso</p>
+        <p className="text-gray-500 mt-4">Para nosotros es importante siempre estar en contacto con el cliente y tener
+          una </p>
+        <p className="text-gray-500"> comunicación constante y efectiva para garantizar los mejores resultados.</p>
+      </div>
+      <div className="flex flex-row justify-center mt-28 text-center space-x-12 mb-16">
+        <IconCard icon={icon1} title="Diseño" number="01"
+                  description="Todo nuestro trabajo pasa por
+                  el proceso de diseño de la mano
+                  del cliente para saber que los
+                  resultados sean justo lo que
+                  se necesita."/>
+        <IconCard icon={icon2} title="Planeación" number="02"
+                  description="La planificación y tiempos de
+                  entrega quedan acordados desde
+                  el inicio del proyecto, además
+                  estamos en comunicación
+                  constante con el cliente."/>
+        <IconCard icon={icon3} title="Producción" number="03"
+                  description="En la etapa de desarrollo nuestro
+                  equipo se enfoca en que no
+                  exista ni un error en ninguno
+                  de los productos solicitados."/>
+      </div>
+      <Footer/>
     </div>
   );
 }
