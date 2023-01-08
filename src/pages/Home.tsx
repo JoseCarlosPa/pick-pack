@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import working from '../assets/imgs/working-woman.png'
+import working2 from '../assets/imgs/working-woman2.png'
 import Card from "../components/Card";
 import SelectProduct from "../components/SelectProduct";
 
@@ -11,22 +12,31 @@ const Home = () => {
 
   const [product, setProduct] = React.useState('Producto 1')
 
-  const ShowProduct = useCallback(()=>{
-    if(product === 'Producto 1'){
-      return <div>Producto 1</div>
+  const ShowProduct = useCallback(() => {
+    if (product === 'Producto 1') {
+      return (
+        <div className="flex flex-col">
+          <p className="font-bold text-2xl">Nuestros materiales son de
+            la mayor calidad del
+            mercado mexicano.</p>
+          <p className="mt-2">Nuestros diferenciadores son la mano de obra dedicada exclusivamente a tu proyecto para
+            que tus productos
+            sean realizados bajo la mejor supervisión y atención que merecen. </p>
+        </div>
+      );
     }
-    if(product === 'Producto 2'){
+    if (product === 'Producto 2') {
       return <div>Producto 2</div>
     }
-    if(product === 'Producto 3'){
+    if (product === 'Producto 3') {
       return <div>Producto 3</div>
     }
-    if(product === 'Producto 4'){
+    if (product === 'Producto 4') {
       return <div>Producto 4</div>
     }
     return <></>
 
-  },[product])
+  }, [product])
 
   return (
     <div className="flex flex-col">
@@ -88,24 +98,34 @@ const Home = () => {
               <Card title="Piezas Creadas" number={97} className="ml-6"/>
             </div>
           </div>
-          <div className="mt-8 mx-32">
-            <div className="grid grid-cols-12 text-center">
-              <div className="col-span-2"></div>
-              <div className="col-span-2 ">
-                <div className="flex flex-col">
-                  <SelectProduct title={"Producto 1"} setProduct={setProduct} />
-                  <SelectProduct title={"Producto 2"} setProduct={setProduct} />
-                  <SelectProduct title={"Producto 3"} setProduct={setProduct} />
-                  <SelectProduct title={"Producto 4"} setProduct={setProduct} />
-                </div>
-              </div>
-              <div>
-                <ShowProduct />
-              </div>
-              <div>3</div>
+        </div>
+      </div>
+      <div className="mt-8 mx-32">
+        <div className="grid grid-cols-12 text-center">
+          <div className="col-span-2"></div>
+          <div className="col-span-2 ">
+            <div className="flex flex-col">
+              <SelectProduct title={"Producto 1"} setProduct={setProduct}/>
+              <SelectProduct title={"Producto 2"} setProduct={setProduct}/>
+              <SelectProduct title={"Producto 3"} setProduct={setProduct}/>
+              <SelectProduct title={"Producto 4"} setProduct={setProduct}/>
             </div>
           </div>
+          <div className="ml-8 col-span-5 text-left">
+            <ShowProduct/>
+          </div>
+          <div>
+            <img src={working2} alt="working"/>
+          </div>
         </div>
+      </div>
+      <div className="flex flex-col mt-28 text-center">
+        <p className="font-bold text-xl text-orange-400">PRODUCCIÓN</p>
+        <p className="font-bold text-4xl text-gray-800 mt-4">Últimos Trabajos</p>
+        <p className="text-gray-500 mt-4">Nos encanta presumir las nuevas piezas y creaciones que realizamos personalizadas</p>
+        <p className="text-gray-500"> para los productos de
+          nuestros clientes.</p>
+
       </div>
 
     </div>
