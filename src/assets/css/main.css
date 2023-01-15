@@ -11,12 +11,12 @@
 }
 
 .typo-tecnologias{
-    font-size: 7vw;
+    font-size: 100px;
     font-weight: bolder;
 }
 
 .typo-parragraph{
-    font-size: 1.5vw;
+    font-size: 24px;
     font-weight: lighter;
 }
 
@@ -62,7 +62,6 @@
 .btn-orange{
     background-color: #FCAF17;
     color: white;
-    font-size: 1.5vw;
     font-weight: 700;
     border-radius: 0;
 }

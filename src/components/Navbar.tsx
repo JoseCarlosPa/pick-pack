@@ -11,8 +11,8 @@ type NavBarProps = {
 const Navbar = ({className}:NavBarProps) => {
 
   return (
-    <div className={`flex flex-row w-full text-xl font-bold mt-4 w-full justify-center ${className}`}>
-      <img src={logoTitle} alt="logo" className="mr-20 -mt-5"/>
+    <div className={`flex flex-row w-full text-xl font-bold md:mt-4 w-full justify-center ${className}`}>
+      <img src={logoTitle} alt="logo" className="md:mr-20 md:-mt-5"/>
       <NavbarItem title="Inicio" link="/"/>
       <DropDown title="Productos">
         <p className="hover:bg-gray-300 cursor-pointer">DUNNAGE</p>

@@ -11,12 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    <BrowserView>
       <App/>
-    </BrowserView>
-    <MobileView>
-      <h1>Estamos trabjando en la version mobil</h1>
-    </MobileView>
   </BrowserRouter>
 );
 
